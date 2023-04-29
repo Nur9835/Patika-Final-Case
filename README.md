@@ -1,10 +1,14 @@
 # Patika-Final-Case
 FMSS Bilişim Front-end Practicum Final-Case
 
-Features
+Features:
+
 Listing starships (https://swapi.dev/)
+
 Search among Starships
+
 Read details of a specific starship
+
 Load more starships with a load more button
 
 
