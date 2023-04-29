@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+ import Page404 from './page/Page404';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import  StarshipDetail from './page/StarshipDetail';
+import FavoriteStarship from './page/FavoriteStarship'
+import React from "react";
+import StarshipList from "./page/StarshipList";
+import Header from './components/Header';
+import { StarshipProvider } from './context/StarshipContext'
+import StarshipFilm from './components/StarshipFilm'
+
+ function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <StarshipProvider>
+     <Header />
+      <Router>
+       <Routes>
+       <Route exact path="/" element={ <div>  <StarshipList/>  </div>   } />
+       <Route path="/starship/:id" element={<StarshipDetail />} />
+       <Route path="*" element={  <Page404 /> } /> 
+       <Route path="/favorite" element={<FavoriteStarship />} />
+       <Route path="/movies/:id" element={<StarshipFilm />} />
+       </Routes>
+       </Router>
+       </StarshipProvider>
     </div>
   );
-}
+};
 
 export default App;
