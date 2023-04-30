@@ -1,6 +1,9 @@
 # Patika-Final-Case
 FMSS Bilişim Front-end Practicum Final-Case
 
+
+### Live : [https://nurstarshipprojectprivate3500.netlify.app/]
+
 Features:
 
 Listing starships (https://swapi.dev/)
